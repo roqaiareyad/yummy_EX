@@ -1,0 +1,355 @@
+<html lang="en"><head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Yummy</title>
+       <link rel="stylesheet" href="css/all.min.css">
+       <link rel="stylesheet" href="css/bootstrap.min.css">
+       <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+   
+       <div id="sidebar" class="side-nav-menu min-vh-100 position-fixed d-flex top-0" style="left: -256.562px;">
+           <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-4">
+               <div class="links">
+                   <ul class="list-unstyled overflow-hidden">
+                       <li id="searchkey" class="py-2 position-relative cursor-pointer" style="top: 300px;">Search</li>
+                       <li id="categoryKey" class="py-2 position-relative cursor-pointer" style="top: 300px;">Categories</li>
+                       <li id="areakey" class="py-2 position-relative cursor-pointer" style="top: 300px;">Area</li>
+                       <li id="ingKey" class="py-2 position-relative cursor-pointer" style="top: 300px;">Ingredients</li>
+                       <li id="contactKey" class="py-2 position-relative cursor-pointer " style="top: 300px;">Contact Us</li>
+                   </ul>
+               </div>
+               <div class="nav-footer">
+                   <div class="icons">
+                       <i class="fa-brands fa-facebook"></i>
+                       <i class="fa-brands fa-twitter"></i>
+                       <i class="fa-solid fa-globe"></i>
+                   </div>
+                   <div class="footer">
+                       <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                   </div>
+               </div>
+           </div>
+           <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+               <img class="logo" src="imgs/logo.png" alt="" srcset="">
+               <i class="fa-solid open-close-icon fa-align-justify fa-2x"></i>
+               <div>
+                   <i class="fa-solid fa-globe d-block"></i>
+                   <i class="fa-solid fa-share-nodes"></i>
+               </div>
+           </div>
+       </div>
+   
+       <div id="searchbar" class="container mt-4" style="display: none;">
+           <div class="row d-flex align-items-center justify-content-center">
+               <div class="col-md-5">
+                   <div class="input-group  mb-3  text-muted">
+                       <input oninput="getApiData(this.value)" id="nameKey" type="text" class="form-control container" placeholder="Search By Name" aria-label="search" aria-describedby="basic-addon1">
+                     </div>
+                     
+                     
+               </div>
+               <div class="col-md-5">
+                   <div class="input-group  mb-3">
+                       <input oninput="getApiDataLetter(this.value)" id="letterKey" type="text" class="form-control container" placeholder="Search By First Letter" aria-label="search" aria-describedby="basic-addon1">
+                     </div>
+                     
+                     
+               </div>
+           </div>
+          
+   
+       </div>
+   
+       <div class="container">
+           <div id="demo" class="row">
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(53065)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/g046bb1663960946.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(0)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Sushi</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(53060)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/tkxquw1628771028.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(1)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Burek</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52977)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(2)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Corba</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52978)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/mlchx21564916997.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(3)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Kumpir</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(53069)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/4pqimk1683207418.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(4)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Bistek</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(53026)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/n3xxd91598732796.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(5)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Tamiya</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(53013)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/urzj1d1587670726.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(6)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Big Mac</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52948)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/1525876468.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(7)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Wontons</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52844)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(8)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Lasagne</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52804)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/uuyrrx1487327597.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(9)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Poutine</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52971)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/1bsv1q1560459826.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(10)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Kafteji</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52929)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/txsupu1511815755.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(11)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Timbits</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52785)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/wuxrtu1483564410.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(12)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Dal fry</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(53027)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/4er7mj1598733193.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(13)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Koshari</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52802)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(14)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Fish pie</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52769)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/sxysrt1468240488.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(15)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Kapsalon</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52854)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(16)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Pancakes</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52887)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/utxqpt1511639216.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(17)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Kedgeree</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(53028)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/kcv6hj1598733479.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(18)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Shawarma</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52980)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/hyarod1565090529.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(19)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Stamppot</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52906)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/wssvvs1511785879.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(20)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Flamiche</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(53006)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/ctg8jd1585563097.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(21)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Moussaka</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(53052)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/hx335q1619789561.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(22)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Roti john</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52963)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/g373701551450225.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(23)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Shakshuka</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   
+           <div class="col-md-3 mt-5">
+                  <div id="mealcont" onclick="GetMealInfo(52811)" class="content position-relative">
+                  <img src="https://www.themealdb.com/images/media/meals/xrrwpx1487347049.jpg" id="meal" class=" w-100 " alt="">
+   
+                  <div id="overlay" onclick="DisplayInstructions(24)" class="overlay position-absolute d-flex align-items-center justify-content-start ">
+                  <h3 class="text-center">Ribollita</h3>
+                  
+                  </div>
+                  </div>
+           
+           </div>   </div>
+       </div>
+   
+       
+       
+   
+   
+   
+   
+   
+       <script src="js/bootstrap.bundle.min.js"></script>
+       <script src="JS/jquery-3.7.1.min.js"></script>
+       <script src="js/index.js"></script>
+   
+   </body>
+   </html>
